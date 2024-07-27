@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./assets/arcturus-audio-favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services</title>
+  <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/services.css"/>
+  <link rel="stylesheet" href="./styles/custom-cursor.css"/>
+</head>
+<body>
+
+  <!-- Background -->
+  <canvas></canvas>
+  <script src="./js/background.js"></script>
+  
+  <!-- Navigation Bar -->
+  <header class="navigation-bar">
+
+    <div class="logo-and-text">
+        <img class="nav-logo" src="./assets/arcturus-audio-medium.png"/>
+
+        <navnorm class="nav">
+            <ul class="nav-list-group">
+                <li class="nav-list-item"><a href="index.html">Home</a></li>
+                <li class="nav-list-item"><a href="services.html">Services</a></li>
+                <li class="nav-list-item"><a href="contact.html">Contact</a></li>
+            </ul>
+        </navnorm>
+    </div>
+
+    <icon class="nav-icon-group">
+      <a href="#" class="shopping-logo-link">
+        <img class="shopping-logo" id="shopping-logo" src="./assets/shopping-logo.png" alt="Shopping Logo"/>
+      </a>
+    
+      <a href="#" class="user-logo-link">
+        <img class="user-logo" id="user-logo" src="./assets/user-logo.png" alt="User Logo"/>
+      </a>
+    </icon>
+
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <svg viewBox="0 0 32 32">
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+          <div class="menu-list" id="menu">
+            <img class="nav-logo-black" src="./assets/arcturus-audio-medium-black.png"/>
+            <div class="menu-item"><a class="link" href="index.html">Home</a></div>
+            <div class="menu-item"><a class="link" href="services.html">Services</a></div>
+            <div class="menu-item"><a class="link" href="contact.html">Contact</a></div>
+            <div class="menu-item"><a class="link" href="#">Cart</a></div>
+            <div class="menu-item"><a class="link" href="#">My Account</a></div>
+            <div class="menu-footer" id="menu-footer"></div>
+            <div class="menu-text" id="menu-text">
+              <p>We are here for you<br><a href="mailto:arcturus.audio@protonmail.com" style="color: #1e1e1e; text-decoration: underline;">arcturus.audio@protonmail.com</a></p>
+            </div>
+          </div>
+      </div>
+    </nav>
+      
+  </header>
+
+  <!-- Error Box -->
+  <main class="error-container">
+    <div class="text-paragraph">
+      <h2 class="error-title">Under Maintenance</h2>
+      <p class="error-text">We are still under maintenance. Please contact us for further inquiries.</p>
+
+      <a href="contact.html" class="button contact-button">Contact</a>
+      <button class="button close-button" id="error-close">Close</button>
+    </div>
+  </main>
+
+
+  <!-- Main Container -->
+  <div class="content-container">
+
+    <!-- Background Change Switch -->
+    <div class="fixed-switch-container">
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    
+    <!-- Text Animation Container -->
+    <div class="text-animation-container">
+      <section class="animation">
+        <div class="first"><div>Want your track to sound like your favorite one?</div></div>
+        <div class="second"><div>Let us take your track to reach to it’s utmost potential!</div></div>
+      </section>
+    </div>
+
+    <div class="cards">
+      <!-- Mixing Card -->
+      <div class="mixing-card">
+        <video id="myMixingVideo" class="mixing-card-video" muted loop>
+          <source src="./assets/console.mp4" type="video/mp4">
+        </video>
+        <div class="mixing-card-info">
+          <p class="mixing-text-title">Mixing </p>
+          <p class="mixing-text-body">Mixing your raw tracks to sound like your favorite record! No gimmicks, just your music at its best.</p>
+        </div>
+        <div class="mixing-card-footer">
+          <span class="mixing-text-title">$29.49</span>
+          <div class="mixing-card-button">
+            <img class="button-logo" src="./assets/shopping-logo-black.png" alt="Shopping Logo"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mastering Card -->
+      <div class="mastering-card">
+        <video id="myMasteringVideo" class="mastering-card-video" muted loop>
+          <source src="./assets/tape-machine.mp4" type="video/mp4">
+        </video>
+        <div class="mastering-card-info">
+          <p class="mastering-text-title">Mastering </p>
+          <p class="mastering-text-body">Master your audio with styles like loud, punchy, open, or wide—pure sonic excellence with no gimmicks.</p>
+        </div>
+        <div class="mastering-card-footer">
+          <span class="mastering-text-title">$29.49</span>
+          <div class="mastering-card-button">
+            <img class="button-logo" src="./assets/shopping-logo-black.png" alt="Shopping Logo"/>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+  </div>
+
+
+  <!-- Background switcher -->
+  <script src="js/theme-switcher.js"></script>
+
+  <!--Error Box Animation-->
+  <script src="js/error-box.js"></script>
+
+  <!--Disappearing Animation For Header Text-->
+  <script>document.addEventListener('scroll', function() {
+    var scrollPosition = window.pageYOffset;
+  
+    var elements = document.querySelectorAll('.text-animation-container');
+  
+    elements.forEach(function(el) {
+      var opacity = 1 - (scrollPosition / 100);
+      el.style.opacity = opacity;
+    });
+  });
+  </script>
+
+  <!--Disappearing Animation For Cards-->
+  <script>document.addEventListener('scroll', function() {
+    var scrollPosition = window.pageYOffset;
+
+    var elements = document.querySelectorAll('.mixing-card');
+
+    elements.forEach(function(el) {
+      var opacity = 1 - (scrollPosition / 400);
+      el.style.opacity = opacity;
+    });
+  });
+  </script>
+
+  <!--Mixing Card Animation Play And Pause-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var masteringCard = document.querySelector('.mixing-card');
+      var video = document.getElementById('myMixingVideo');
+
+      masteringCard.addEventListener('mouseenter', function() {
+        video.play();    
+      });
+
+      masteringCard.addEventListener('mouseleave', function() {
+        video.pause();
+        video.currentTime = 0; // Set the current time to the desired frame (in seconds)
+      });
+    });
+  </script>
+
+  <!--Masterint Card Animation Play And Pause-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var masteringCard = document.querySelector('.mastering-card');
+      var video = document.getElementById('myMasteringVideo');
+
+      masteringCard.addEventListener('mouseenter', function() {
+        video.play();    
+      });
+
+      masteringCard.addEventListener('mouseleave', function() {
+        video.pause();
+        video.currentTime = 0; // Set the current time to the desired frame (in seconds)
+      });
+    });
+  </script>
+
+  <!--Cursor-->
+  <div class="custom-cursor-container">
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollow"></div>
+  </div>
+  
+  <script src="js/cursor.js"></script>
+
+</body>
+</html>

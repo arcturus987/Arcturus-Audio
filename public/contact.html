@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./assets/arcturus-audio-favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/contact.css"/>
+  <link rel="stylesheet" href="./styles/custom-cursor.css"/>
+</head>
+<body>
+
+  <!-- Background -->
+  <canvas></canvas>
+  <script src="./js/background.js"></script>
+
+  <!-- Navigation Bar -->
+  <header class="navigation-bar">
+
+    <div class="logo-and-text">
+        <img class="nav-logo" src="./assets/arcturus-audio-medium.png"/>
+
+        <navnorm class="nav">
+            <ul class="nav-list-group">
+                <li class="nav-list-item"><a href="index.html">Home</a></li>
+                <li class="nav-list-item"><a href="services.html">Services</a></li>
+                <li class="nav-list-item"><a href="contact.html">Contact</a></li>
+            </ul>
+        </navnorm>
+    </div>
+
+    <icon class="nav-icon-group">
+      <a href="#" class="shopping-logo-link">
+        <img class="shopping-logo" id="shopping-logo" src="./assets/shopping-logo.png" alt="Shopping Logo"/>
+      </a>
+    
+      <a href="#" class="user-logo-link">
+        <img class="user-logo" id="user-logo" src="./assets/user-logo.png" alt="User Logo"/>
+      </a>
+    </icon>
+
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <svg viewBox="0 0 32 32">
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+          <div class="menu-list" id="menu">
+            <img class="nav-logo-black" src="./assets/arcturus-audio-medium-black.png"/>
+            <div class="menu-item"><a class="link" href="index.html">Home</a></div>
+            <div class="menu-item"><a class="link" href="services.html">Services</a></div>
+            <div class="menu-item"><a class="link" href="contact.html">Contact</a></div>
+            <div class="menu-item"><a class="link" href="#">Cart</a></div>
+            <div class="menu-item"><a class="link" href="#">My Account</a></div>
+            <div class="menu-footer" id="menu-footer"></div>
+            <div class="menu-text" id="menu-text">
+              <p>We are here for you<br><a href="mailto:arcturus.audio@protonmail.com" style="color: #1e1e1e; text-decoration: underline;">arcturus.audio@protonmail.com</a></p>
+            </div>
+          </div>
+      </div>
+    </nav>
+      
+  </header>
+
+  <!-- Error Box -->
+  <div class="error-container">
+    <div class="text-paragraph">
+      <h2 class="error-title">Under Maintenance</h2>
+      <p class="error-text">We are still under maintenance. Please contact us for further inquiries.</p>
+
+      <a href="contact.html" class="button contact-button">Contact</a>
+      <button class="button close-button" id="error-close">Close</button>
+    </div>
+  </div>
+
+
+
+
+  <div class="content-container">
+
+    <!-- Background Change Switch -->
+    <div class="fixed-switch-container">
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="modal">
+      <form class="form" action="https://formsubmit.co/621c8efe5d2bbcf270b1e0dc2dae587c" method="POST">
+
+        <div class="title-text">
+          <p>Get In Touch!</p>
+        </div>
+
+        <div class="paragraph-text">
+          <p>Fill in the information required in the form and we will get back to you as soon as possible. Or please send an email to <a href="mailto:arcturus.audio@protonmail.com" style="color: #1e1e1e; text-decoration: underline;">arcturus.audio@protonmail.com</a></p>
+        </div>               
+
+        <div class="customer-info--form">
+          <div class="input_container">
+            <label for="name_label" class="input_label">Name*</label>
+            <input id="name_field" class="input_field" type="Name" name="Name" title="Input title" placeholder="What should we call you?">
+          </div>
+          <div class="input_container">
+            <label for="email_label" class="input_label">Email*</label>
+            <input id="email_field" class="input_field" type="Email" name="Email" title="Input title" placeholder="How should we reach out to you?">
+          </div>
+          <div class="input_container">
+            <label for="message_label" class="input_label">Message (Optional)</label>
+            <textarea id="message_field" class="input_field textarea_field" type= "Message" name="Message" title="Input title" placeholder="Tell us a bit about why you are reaching out!"></textarea>
+          </div>
+        </div>
+          <button class="submit--btn">Submit</button>
+      </form>
+    </div>
+    
+  </div>
+
+  <!-- Background switcher -->
+  <script src="js/theme-switcher.js"></script>
+
+  <!--Error Box Animation-->
+  <script src="js/error-box.js"></script>
+
+  <!--Cursor-->
+  <div class="custom-cursor-container">
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollow"></div>
+  </div>
+  
+  <script src="js/cursor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./assets/arcturus-audio-favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arcturus Audio - Elevating Silence to Serenades</title>
+  <meta name="description" content="Arcturus Audio: Unleashing Sonic Aesthetics. Discover our premium audio services and products for an unparalleled auditory experience.">
+  <meta name="keywords" content="audio, sound, music production, audio equipment, sonic aesthetics">
+  <meta name="author" content="Arcturus Audio">
+  <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/home.css"/>
+  <link rel="stylesheet" href="./styles/custom-cursor.css"/>
+</head>
+<body>
+
+  <!-- Background -->
+  <canvas id="background"></canvas>
+  <script src="./js/background.js"></script>
+  
+  <div>
+
+    <div class="content-container">
+
+      <img class="home-logo-big" src="./assets/arcturus-audio-medium.png"/>
+
+      <div class="grid-container">
+        <div class="motto-and-vector">
+          <p class="motto-text">Elevating Silence to Serenades,&nbsp;<span class="break">Unleashing Sonic Aesthetics!</span></p>
+          <!-- <canvas id="animationCanvas"></canvas> -->
+          <img class="waves-vector" src="./assets/waves-vector.png"/>
+        </div>
+      </div>
+
+      <!-- Background Change Switch -->
+      <div class="fixed-switch-container">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navigation-bar">
+
+    <div class="logo-and-text">
+        <img class="nav-logo" src="./assets/arcturus-audio-medium.png"/>
+
+        <navnorm class="nav">
+          <ul class="nav-list-group">
+              <li class="nav-list-item"><a href="index.html">Home</a></li>
+              <li class="nav-list-item"><a href="services.html">Services</a></li>
+              <li class="nav-list-item"><a href="contact.html">Contact</a></li>
+          </ul>
+      </navnorm>
+    </div>
+
+    <icon class="nav-icon-group">
+      <a href="#" class="shopping-logo-link">
+        <img class="shopping-logo" id="shopping-logo" src="./assets/shopping-logo.png" alt="Shopping Logo"/>
+      </a>
+    
+      <a href="#" class="user-logo-link">
+        <img class="user-logo" id="user-logo" src="./assets/user-logo.png" alt="User Logo"/>
+      </a>
+    </icon>
+    
+    <!--Mobile Nav Bar-->
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <svg viewBox="0 0 32 32">
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+          <div class="menu-list" id="menu">
+            <img class="nav-logo-black" src="./assets/arcturus-audio-medium-black.png"/>
+            <div class="menu-item"><a class="link" href="index.html">Home</a></div>
+            <div class="menu-item"><a class="link" href="services.html">Services</a></div>
+            <div class="menu-item"><a class="link" href="contact.html">Contact</a></div>
+            <div class="menu-item"><a class="link" href="#">Cart</a></div>
+            <div class="menu-item"><a class="link" href="#">My Account</a></div>
+            <div class="menu-footer" id="menu-footer"></div>
+            <div class="menu-text" id="menu-text">
+              <p>We are here for you<br><a href="mailto:arcturus.audio@protonmail.com" style="color: #1e1e1e; text-decoration: underline;">arcturus.audio@protonmail.com</a></p>
+            </div>
+          </div>
+      </div>
+    </nav>
+      
+  </header>
+
+  <!-- Error Box -->
+  <main class="error-container">
+    <div class="text-paragraph">
+      <h2 class="error-title">Under Maintenance</h2>
+      <p class="error-text">We are still under maintenance. Please contact us for further inquiries.</p>
+      <a href="contact.html" class="button contact-button">Contact</a>
+      <button class="button close-button" id="error-close">Close</button>
+    </div>
+  </main>
+
+
+
+  <!-- Bottom element to scroll to -->
+  <div id="bottom"></div>
+    <div class="arrow">
+      <span></span>
+    </div>
+
+  <!-- Scroll To Bottom On Click -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var arrow = document.querySelector('.arrow');
+  
+      arrow.addEventListener('click', function () {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight || document.body.scrollHeight,
+          behavior: 'smooth' 
+        });
+      });
+  
+      window.addEventListener('scroll', function() {
+        var windowHeight = window.innerHeight;
+        var documentHeight = document.documentElement.scrollHeight;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+        if (scrollTop + windowHeight >= documentHeight) {
+          arrow.classList.add('transparent');
+        } else {
+          arrow.classList.remove('transparent');
+        }
+      });
+    });
+  </script>
+
+  <!-- Theme switcher -->
+  <script src="js/theme-switcher.js"></script>
+  
+  <!--Error Box Animation-->
+  <script src="js/error-box.js"></script>
+
+  <!--Custom Cursor-->
+  <div class="custom-cursor-container">
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollow"></div>
+  </div>
+  
+  <script src="js/cursor.js"></script>
+
+  <!-- Logo transition -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const homeLogo = document.querySelector('.home-logo-big');
+      const navLogo = document.querySelector('.nav-logo');
+      const scrollThreshold = 150; // Adjust this value as needed
+
+      if (window.scrollY > scrollThreshold) {
+        homeLogo.classList.add('scrolled');
+        navLogo.classList.add('scrolled');
+      } else {
+        homeLogo.classList.remove('scrolled');
+        navLogo.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+  
+
+<script type="module">
+
+  // Import the functions you need from the SDKs you need
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+
+  // Your web app's Firebase configuration
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyDa86D4ijyt8Fmpey9NLv1Ngxg47On9B20",
+
+    authDomain: "arcturus-audio.firebaseapp.com",
+
+    projectId: "arcturus-audio",
+
+    storageBucket: "arcturus-audio.appspot.com",
+
+    messagingSenderId: "3565733222",
+
+    appId: "1:3565733222:web:799066c1e7dad8f5fdb4a7",
+
+    measurementId: "G-2PN1BSFTJC"
+
+  };
+
+
+  // Initialize Firebase
+
+  const app = initializeApp(firebaseConfig);
+
+  const analytics = getAnalytics(app);
+
+</script>
+</body>
+</html>

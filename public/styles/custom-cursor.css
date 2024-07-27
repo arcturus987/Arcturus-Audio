@@ -1,0 +1,86 @@
+.custom-cursor-container {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.custom-cursor-container .cursor {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--cursor-color);
+  pointer-events: none;
+  opacity: 1;
+}
+
+.custom-cursor-container .cursor-follower {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: 0.1s ease-out;
+  pointer-events: none;
+  will-change: all;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+/* Cursor hover effect */
+.custom-cursor-container .cursor-follower.hover {
+  opacity: 0;
+}
+
+/* Cursor checkbox hover effect */
+.custom-cursor-container .cursor.checkbox-hover {
+  opacity: 0;
+}
+
+.custom-cursor-container .cursor-follower.checkbox-hover {
+  height: 100px;
+  width: 100px;
+  border: 5px solid #fff;
+}
+
+/* color change for contact form */
+.modal .form:hover ~ .custom-cursor-container .cursor-follower {
+  border: 2px solid #000; /
+}
+
+/* Hide the default cursor */
+body, * {
+  cursor: none;
+}
+
+@media (max-width: 1100px) and (min-width: 768px) {
+  .custom-cursor-container {
+    cursor: none;
+  }
+  .custom-cursor-container .cursor, 
+  .custom-cursor-container .cursor-follower {
+    display: none;
+  }
+
+  body, * {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-cursor-container {
+    cursor: none;
+  }
+  .custom-cursor-container .cursor, 
+  .custom-cursor-container .cursor-follower {
+    display: none;
+  }
+
+  body, * {
+    cursor: pointer;
+  }
+}
